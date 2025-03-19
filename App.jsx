@@ -1,17 +1,17 @@
-const Header =({course})=>{
-  console.log(course.name)
+const Header =(props)=>{
+  console.log(props.course)
   return (
     <>
-      <h1> {course.name} </h1>
+      <h1> {props.course.name} </h1>
     </>
   )
 }
-const Content =({course})=>{
-  console.log(course)
+const Content =(props)=>{
+  console.log(props.course)
   return (
     <div>
 
-        {course.map(value=>{
+        {props.course.map(value=>{
           return (
             <p>{value.name} {value.exercises} </p>
           )
@@ -20,11 +20,11 @@ const Content =({course})=>{
     </div>
   )
 }
-const Total =({course})=>{
-  console.log(course)
+const Total =(props)=>{
+  console.log(props.course)
   return (
     <p>
-      Number of exercises {course[0].exercises + course[1].exercises + course[2].exercises}
+      Number of exercises {props.course[0].exercises + props.course[1].exercises + props.course[2].exercises}
     </p>
   )
 }
